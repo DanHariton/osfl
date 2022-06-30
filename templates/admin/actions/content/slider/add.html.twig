@@ -1,0 +1,29 @@
+{% extends 'admin/components/layout.html.twig' %}
+
+{% block title %}Přidat obrázek pro slider{% endblock %}
+
+{% block content %}
+    <h1 class="h3 mb-2 text-gray-800">
+        Přidat obrázek pro slider
+    </h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            {{ form_start(form) }}
+
+            {{ form_row(form.altName) }}
+            {{ form_row(form.displayOrder) }}
+            <div class="{% if app.session.get('language') != localeEn %}d-none{% endif %}">
+                {{ form_row(form.mainTextEn) }}
+                {{ form_row(form.smallTextEn) }}
+            </div>
+            <div class="{% if app.session.get('language') != localeCs %}d-none{% endif %}">
+                {{ form_row(form.mainTextCs) }}
+                {{ form_row(form.smallTextCs) }}
+            </div>
+            {{ form_row(form.image) }}
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

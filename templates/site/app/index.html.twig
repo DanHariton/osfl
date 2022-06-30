@@ -1,0 +1,116 @@
+{% extends 'site/layout.html.twig' %}
+
+{% block title %}OSFL{% endblock %}
+
+{% block body %}
+    {% include 'site/app/_component/header.html.twig' %}
+
+    <div id="main-carousel" class="carousel slide mb-6 mb-md-5 mb-lg-6 mb-xl-7" data-ride="carousel" data-aos="fade-up">
+        <ol class="carousel-indicators">
+            {% set count = 0 %}
+            {% for sliderImage in sliderImages %}
+                <li data-target="#main-carousel" data-slide-to="{{ count }}" class="active"></li>
+                {% set count = count + 1 %}
+            {% endfor %}
+        </ol>
+        <div class="carousel-inner">
+            {% for sliderImage in sliderImages %}
+                <div class="carousel-item {% if loop.first %}active{% endif %}" data-interval="5000">
+                    <img class="d-block w-100" src="{{ asset(imageAssets ~ sliderImage.imageFilename) }}" alt="{{ sliderImage.altName }}" loading="lazy">
+                    <div class="container">
+                        <div class="carousel-caption text-center">
+                            <h1 class="font-weight-bold">{{ etrans.read(sliderImage.mainText) }}</h1>
+                            <p>{{ etrans.read(sliderImage.smallText) }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <a class="carousel-control-prev" href="#main-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#main-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-center mt-6 pt-4 pb-5">
+            <h5 class="px-3 py-2 px-2 border-dark border d-inline">{{ 'index.offer'|trans }}</h5>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row no-gutters">
+                {% for offer in lastOffers|slice(0, 1) %}
+                    <div class="mb-4 m-1 d-flex justify-content-between pb-3 border-bottom border-dark">
+                        <div class="w-40 mt-5">
+                            <h3>{{ etrans.read(offer.name) }}</h3>
+                            <p>{{ etrans.read(offer.description) }}</p>
+                        </div>
+                        <div class="offer-photos w-50">
+                            <img id="preview-photo" src="{{ asset(imageAssets ~ offer.images[0].fileName) }}" alt="offer">
+                            <div class="smallest-photo-offer">
+                                <div class="container-level-photo">
+                                    {% for image in offer.images[1:4] %}
+                                        <img class="preview-photo-small" src="{{ asset(imageAssets ~ image.fileName) }}" alt="lexus car">
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% for offer in lastOffers|slice(1, 1) %}
+                    <div class="mb-4 m-1 d-flex justify-content-between pb-3 border-bottom border-dark">
+                        <div class="offer-photos w-50">
+                            <img id="preview-photo" src="{{ asset(imageAssets ~ offer.images[0].fileName) }}" alt="offer">
+                            <div class="smallest-photo-offer">
+                                <div class="container-level-photo">
+                                    {% for image in offer.images[1:4] %}
+                                        <img class="preview-photo-small" src="{{ asset(imageAssets ~ image.fileName) }}" alt="lexus car">
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-40 mt-5">
+                            <h3>{{ etrans.read(offer.name) }}</h3>
+                            <p>{{ etrans.read(offer.description) }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% for offer in lastOffers|slice(2, 1) %}
+                    <div class="mb-4 m-1 d-flex justify-content-between pb-3">
+                        <div class="w-40 mt-5">
+                            <h3>{{ etrans.read(offer.name) }}</h3>
+                            <p>{{ etrans.read(offer.description) }}</p>
+                        </div>
+                        <div class="offer-photos w-50">
+                            <img id="preview-photo" src="{{ asset(imageAssets ~ offer.images[0].fileName) }}" alt="offer">
+                            <div class="smallest-photo-offer">
+                                <div class="container-level-photo">
+                                    {% for image in offer.images[1:4] %}
+                                        <img class="preview-photo-small" src="{{ asset(imageAssets ~ image.fileName) }}" alt="lexus car">
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray mt-5">
+        <div class="container text-center pt-6 pb-6">
+            <div class="w-75 m-auto">
+                <h5>{{ 'index.about.title'|trans }}</h5>
+                <p>{{ 'index.about.text'|trans }}</p>
+            </div>
+        </div>
+    </div>
+
+    {% include 'site/app/_component/contact.html.twig' %}
+    {% include 'site/app/_component/footer.html.twig' %}
+
+{% endblock %}

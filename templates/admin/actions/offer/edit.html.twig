@@ -1,0 +1,48 @@
+{% extends 'admin/components/layout.html.twig' %}
+
+{% block title %}Změnit nabídku{% endblock %}
+
+{% block content %}
+    <h1 class="h3 mb-2 text-gray-800">
+        Změnit nabídku
+    </h1>
+    {% include 'admin/components/flashes.html.twig' %}
+
+    <a class="btn btn-info btn-sm mb-3" href="{{ path('_offer_list') }}">Zpět</a>
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            {{ form_start(form) }}
+
+            <div class="{% if app.session.get('language') != localeEn %}d-none{% endif %}">
+                {{ form_row(form.nameEn) }}
+                {{ form_row(form.descriptionEn) }}
+            </div>
+            <div class="{% if app.session.get('language') != localeCs %}d-none{% endif %}">
+                {{ form_row(form.nameCs) }}
+                {{ form_row(form.descriptionCs) }}
+            </div>
+
+            <h5>Aktuální obrázky: </h5>
+            <div class="row mb-3">
+                {% for image in offer.orderedImages %}
+                    <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                        <img class="img-full" src="{{ asset(imageAssets ~ image.fileName) }}" alt="Obrazek">
+                        <a class="btn btn-sm btn-secondary mr-1 mt-2" href="{{ path('_offer_image_reorder', {'offer': offer.id, 'file': image.id, 'way': 'down'}) }}">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <a class="btn btn-sm btn-secondary mr-1 mt-2" href="{{ path('_offer_image_reorder', {'offer': offer.id, 'file': image.id, 'way': 'top'}) }}">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a class="btn btn-sm btn-secondary mt-2" onclick="return confirm('Jsi si jistý?')"
+                           href="{{ path('_offer_image_delete', {'offer': offer.id, 'file': image.id}) }}">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

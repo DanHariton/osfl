@@ -1,0 +1,38 @@
+header:
+  hp: 'Domů'
+  aboutUs: 'O nás'
+  offer: 'Nabídka'
+  preparing: 'Připravujeme'
+  contact: 'Kontakt'
+index:
+  offer: 'Naše nabídka'
+  about:
+    title: 'O nás'
+    text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer lacinia. Class aptent taciti sociosqu ad litora
+           torquent per conubia nostra, per inceptos hymenaeos. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+           aut odit aut fugit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer lacinia. Class aptent taciti
+           sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nemo enim ipsam voluptatem quia
+           voluptas sit aspernatur aut odit aut fugit.'
+  contact:
+    title: 'Kontakt'
+    text1: 'Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit. Integer
+            lacinia.'
+    text2: 'Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit. Integer
+            lacinia.'
+about:
+  title: 'O nás'
+  text1: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer
+          lacinia. Class aptent taciti sociosqu ad litora torquent per conubia
+          nostra, per inceptos hymenaeos. Nemo enim ipsam voluptatem
+          quia voluptas sit aspernatur aut odit aut fugit. Lorem ipsum dolor
+          sit amet, consectetuer adipiscing elit. Integer lacinia. Class aptent
+          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+          hymenaeos. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit.'
+  text2: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer
+          lacinia. Class aptent taciti sociosqu ad litora torquent per conubia
+          nostra, per inceptos hymenaeos. Nemo enim ipsam voluptatem
+          quia voluptas sit aspernatur aut odit aut fugit. Lorem ipsum dolor
+          sit amet, consectetuer adipiscing elit.'

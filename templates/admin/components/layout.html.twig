@@ -1,0 +1,19 @@
+{% extends 'admin/app_layout_admin.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        {% include 'admin/components/sidebar.html.twig' %}
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                {% include 'admin/components/nav.html.twig' %}
+
+                <div class="container-fluid">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        {% include 'admin/security/logout.html.twig' %}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,30 @@
+a
+  font-size 1rem
+  font-weight 600
+  color $color-main-text
+
+  &:hover
+    color $color-main-text-selected
+
+a.underlined
+  padding-bottom 0.4rem
+  transition border-width .1s ease-in-out
+  border-bottom 1px solid $color-main-text
+
+  &:hover
+    text-decoration none
+    border-bottom 3px solid $color-main-text-selected
+
+a.no-decorated
+  text-decoration none
+  &:hover
+    text-decoration none
+
+a.active
+  text-decoration underline
+
+a.default-underline
+  text-decoration underline
+
+a.text-size-default
+  font-size inherit

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <meta type="description" content="{% block meta_description %}{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+    <meta name="author" content="Stromberg">
+    {% block css %}
+        <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
+        <link rel="icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
+        <link rel="stylesheet" href="{{ asset('admin/app.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    {% endblock %}
+</head>
+<body>
+{% set localeCs = 'cs' %}
+{% set localeEn = 'en' %}
+
+{% block body %}{% endblock %}
+{% block js %}
+    <script src="{{ asset('admin/app.js') }}"></script>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% extends 'admin/components/layout.html.twig' %}
+
+{% block title %}Změnit nastavení obrázku{% endblock %}
+
+{% block content %}
+    <h1 class="h3 mb-2 text-gray-800">
+        Změnit nastavení obrázku
+    </h1>
+    {% include 'admin/components/flashes.html.twig' %}
+
+    <a class="btn btn-info btn-sm mb-3" href="{{ path('_slider_list') }}">Zpět</a>
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            {{ form_start(form) }}
+
+            {{ form_row(form.altName) }}
+            {{ form_row(form.displayOrder) }}
+            <div class="{% if app.session.get('language') != localeEn %}d-none{% endif %}">
+                {{ form_row(form.mainTextEn) }}
+                {{ form_row(form.smallTextEn) }}
+            </div>
+            <div class="{% if app.session.get('language') != localeCs %}d-none{% endif %}">
+                {{ form_row(form.mainTextCs) }}
+                {{ form_row(form.smallTextCs) }}
+            </div>
+            <h5>Aktuální obrázek: </h5>
+            <div class="row">
+                <div class="col-4 mb-1 text-center">
+                    <img class="img-full" src="{{ asset(imageAssets ~ sliderImage.imageFilename) }}" alt="{{ sliderImage.altName }}">
+                </div>
+            </div>
+            {{ form_row(form.image) }}
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

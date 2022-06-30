@@ -1,0 +1,26 @@
+{% extends 'admin/components/layout.html.twig' %}
+
+{% block title %}Přidat novy zaznam{% endblock %}
+
+{% block content %}
+    <h1 class="h3 mb-2 text-gray-800">
+        Přidat novy zaznam
+    </h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            {{ form_start(form) }}
+
+            <div class="{% if app.session.get('language') != localeEn %}d-none{% endif %}">
+                {{ form_row(form.monthEn) }}
+                {{ form_row(form.scheduleEn) }}
+            </div>
+            <div class="{% if app.session.get('language') != localeCs %}d-none{% endif %}">
+                {{ form_row(form.monthCs) }}
+                {{ form_row(form.scheduleCs) }}
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
