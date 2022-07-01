@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AppController extends AbstractController
 {
     /**
-     * @Route("/{_locale}/", name="site_app_index", defaults={"_locale": "cs"}, requirements={"_locale"="en|cs"})
+     * @Route("/{_locale}", name="site_app_index", defaults={"_locale": "cs"}, requirements={"_locale": "en|cs"})
      * @param EntityManagerInterface $em
      * @return Response
      */
@@ -28,7 +28,7 @@ class AppController extends AbstractController
     }
 
     /**
-     * @Route("/about", name="site_app_about")
+     * @Route("/{_locale}/about", name="site_app_about", defaults={"_locale": "cs"}, requirements={"_locale": "en|cs"})
      */
     public function about()
     {
