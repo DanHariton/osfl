@@ -92,13 +92,13 @@
                             <p>{{ etrans.read(offer.description)|raw }}</p>
                         </div>
                         <div class="offer-photos w-100 w-md-50">
-                            <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
+                            <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}-{{ offer.id }}" data-title="{{ etrans.read(offer.name) }}">
                                 <img class="w-100" src="{{ asset(imageAssets ~ offer.images[0].fileName) }}" alt="offer">
                             </a>
                             <div class="smallest-photo-offer">
                                 <div class="container-level-photo w-100">
                                     {% for image in offer.images[1:4] %}
-                                        <a class="preview-photo-small" href="{{ asset(imageAssets ~ image.fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
+                                        <a class="preview-photo-small" href="{{ asset(imageAssets ~ image.fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}-{{ offer.id }}" data-title="{{ etrans.read(offer.name) }}">
                                             <img class="w-100" src="{{ asset(imageAssets ~ image.fileName) }}" alt="offer">
                                         </a>
                                     {% endfor %}
@@ -157,13 +157,13 @@
                                 <p>{{ etrans.read(offer.description)|raw }}</p>
                             </div>
                             <div class="offer-photos w-100 w-md-50">
-                                <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
+                                <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}-{{ offer.id }}" data-title="{{ etrans.read(offer.name) }}">
                                     <img class="w-100" src="{{ asset(imageAssets ~ offer.images[0].fileName) }}" alt="offer">
                                 </a>
                                 <div class="smallest-photo-offer">
                                     <div class="container-level-photo w-100">
                                         {% for image in offer.images[1:4] %}
-                                            <a class="preview-photo-small" href="{{ asset(imageAssets ~ image.fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
+                                            <a class="preview-photo-small" href="{{ asset(imageAssets ~ image.fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}-{{ offer.id }}" data-title="{{ etrans.read(offer.name) }}">
                                                 <img class="w-100" src="{{ asset(imageAssets ~ image.fileName) }}" alt="offer">
                                             </a>
                                         {% endfor %}
@@ -225,13 +225,13 @@
                                 <p>{{ etrans.read(offer.description)|raw }}</p>
                             </div>
                             <div class="offer-photos w-100 w-md-50">
-                                <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
+                                <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}-{{ offer.id }}" data-title="{{ etrans.read(offer.name) }}">
                                     <img class="w-100" src="{{ asset(imageAssets ~ offer.images[0].fileName) }}" alt="offer">
                                 </a>
                                 <div class="smallest-photo-offer">
                                     <div class="container-level-photo w-100">
                                         {% for image in offer.images[1:4] %}
-                                            <a class="preview-photo-small" href="{{ asset(imageAssets ~ image.fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
+                                            <a class="preview-photo-small" href="{{ asset(imageAssets ~ image.fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}-{{ offer.id }}" data-title="{{ etrans.read(offer.name) }}">
                                                 <img class="w-100" src="{{ asset(imageAssets ~ image.fileName) }}" alt="offer">
                                             </a>
                                         {% endfor %}
