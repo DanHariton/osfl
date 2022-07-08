@@ -8,19 +8,21 @@ index:
   offer: 'Naše nabídka'
   about:
     title: 'O nás'
-    text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer lacinia. Class aptent taciti sociosqu ad litora
-           torquent per conubia nostra, per inceptos hymenaeos. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-           aut odit aut fugit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer lacinia. Class aptent taciti
-           sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nemo enim ipsam voluptatem quia
-           voluptas sit aspernatur aut odit aut fugit.'
+    text: 'Vydáváme Vlastní známky, přítiskové dopisnice, speciální námětové obálky, zajišťujeme poštovní příležitostná a strojová razítka, přítiskové Rekomandační nálepky.'
+    text2: 'Připomínáme aktuální výročí, osobnosti, události.'
   contact:
     title: 'Kontakt'
-    text1: 'Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit. Integer
-            lacinia.'
-    text2: 'Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit. Integer
-            lacinia.'
+    e-mail: 'E-mail:'
+    text1: 'Poštovní korespondence na našeho odborného poradce:'
+    text2: 'Doc. RNDr. Václav Ziegler, CSc.'
+    text3: 'K Dolům 1715/39'
+    text4: '143 00 Praha – Modřany'
+    text5: 'Možno též na:'
+    text6: 'Svaz českých filatelistů, z.s.'
+    text7: 'Odborná společnost Fauna-Flora'
+    text8: 'Opletalova  29'
+    text9: '110 00 Praha 1'
+    text10: 'Kontaktní telefon:'
 about:
   title: 'O nás'
   text1: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer
@@ -36,3 +38,9 @@ about:
           nostra, per inceptos hymenaeos. Nemo enim ipsam voluptatem
           quia voluptas sit aspernatur aut odit aut fugit. Lorem ipsum dolor
           sit amet, consectetuer adipiscing elit.'
+preparing:
+  title: 'Připravujeme'
+contact:
+  title: 'Kontakt'
+  text1: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer lacinia.'
+  text2: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer lacinia.'

@@ -1,6 +1,6 @@
 {% extends 'site/layout.html.twig' %}
 
-{% block title %}OSFL | {{ 'index.contact.title'|trans }}{% endblock %}
+{% block title %}OSFL | {{ 'index.about.title'|trans }}{% endblock %}
 
 {% block body %}
     {% include 'site/app/_component/header.html.twig' %}
@@ -8,16 +8,16 @@
     <div id="main-carousel" class="carousel slide mb-6 mb-md-5 mb-lg-6 mb-xl-7" data-ride="carousel" data-aos="fade-up">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img style="height: 660px" class="d-block w-100" src="{{ asset('images/about-us.jpg') }}" alt="about us" loading="lazy">
+                <img class="d-block w-100" src="{{ asset('images/about-us.jpg') }}" alt="about us" loading="lazy">
             </div>
         </div>
     </div>
 
-    <div class="container text-center mb-6">
-        <h5 class="mb-4">{{ 'about.title'|trans }}</h5>
-        <div class="d-flex justify-content-sm-between text-left">
-            <p class="w-45">{{ 'about.text1'|trans }}</p>
-            <p class="w-45">{{ 'about.text2'|trans }}</p>
+    <div class="container text-md-center text-left mb-6 px-md-0 px-5">
+        <h4 class="mb-4">{{ 'about.title'|trans }}</h4>
+        <div class="d-flex justify-content-md-between justify-content-center flex-column flex-md-row">
+            <p class="w-100 w-md-45 text-left">{{ 'index.about.text'|trans }}</p>
+            <p class="w-100 w-md-45 text-left">{{ 'index.about.text2'|trans }}</p>
         </div>
 
     </div>

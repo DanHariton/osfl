@@ -30,6 +30,7 @@
   "dependencies": {
     "@splidejs/splide": "^3.6.9",
     "aos": "^2.3.4",
+    "lightbox2": "^2.11.3",
     "movinwords": "^1.0.6",
     "popper.js": "^1.16.1",
     "startbootstrap-sb-admin-2": "^4.1.4"

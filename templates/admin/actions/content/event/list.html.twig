@@ -1,36 +1,15 @@
 {% extends 'admin/components/layout.html.twig' %}
-
-{% block title %}Změnit zaznam{% endblock %}
+{% block title %}Events{% endblock %}
 
 {% block content %}
+    <h1 class="h3 mb-2 text-gray-800">Events</h1>
     {% include 'admin/components/flashes.html.twig' %}
-
-    <a class="btn btn-info btn-sm mb-3" href="{{ path('_preparing_list') }}">Zpět</a>
-
-    <h1 class="h3 mb-2 text-gray-800">
-        Změnit zaznam
-    </h1>
-
-    <div class="card shadow mb-4">
-        <div class="card-body">
-            {{ form_start(form) }}
-
-            <div class="{% if app.session.get('language') != localeEn %}d-none{% endif %}">
-                {{ form_row(form.monthEn) }}
-            </div>
-            <div class="{% if app.session.get('language') != localeCs %}d-none{% endif %}">
-                {{ form_row(form.monthCs) }}
-            </div>
-
-            {{ form_end(form) }}
-        </div>
-    </div>
 
     <a href="{{ path('_event_add') }}" class="btn btn-primary btn-sm mb-3">Přidat novy event</a>
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Související eventy</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Events</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -45,7 +24,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    {% for event in preparing.events %}
+                    {% for event in events %}
                         <tr>
                             <td>{{ event.id }}</td>
                             <td>{{ etrans.jsonHtml(event.preparing.month)|raw }}</td>

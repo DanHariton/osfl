@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
@@ -23,11 +24,11 @@ class OfferType extends AbstractType
                 'label' => 'Název CZ',
                 'required' => false,
             ])
-            ->add('descriptionEn', TextareaType::class, [
+            ->add('descriptionEn', CKEditorType::class, [
                 'label' => 'Popis EN',
                 'required' => false,
             ])
-            ->add('descriptionCs', TextareaType::class, [
+            ->add('descriptionCs', CKEditorType::class, [
                 'label' => 'Popis CZ',
                 'required' => false,
             ])

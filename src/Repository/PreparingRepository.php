@@ -22,8 +22,8 @@ class PreparingRepository extends ServiceEntityRepository
     }
 
     /**
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @param Preparing $entity
+     * @param bool $flush
      */
     public function add(Preparing $entity, bool $flush = true): void
     {
@@ -34,8 +34,8 @@ class PreparingRepository extends ServiceEntityRepository
     }
 
     /**
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @param Preparing $entity
+     * @param bool $flush
      */
     public function remove(Preparing $entity, bool $flush = true): void
     {
@@ -43,6 +43,20 @@ class PreparingRepository extends ServiceEntityRepository
         if ($flush) {
             $this->_em->flush();
         }
+    }
+
+    /**
+     * @return int|mixed|string
+     */
+    public function findLastMonthPreparings()
+    {
+        return $this->createQueryBuilder('p')
+            ->leftJoin('p.events', 'events')
+            ->orderBy('events.date', 'ASC')
+            ->setMaxResults(12)
+            ->getQuery()
+            ->getResult()
+            ;
     }
 
     // /**

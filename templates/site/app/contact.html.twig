@@ -1,0 +1,41 @@
+{% extends 'site/layout.html.twig' %}
+
+{% block title %}OSFL | {{ 'index.contact.title'|trans }}{% endblock %}
+
+{% block body %}
+    {% include 'site/app/_component/header.html.twig' %}
+
+    <div id="main-carousel" class="carousel slide mb-6 mb-md-5 mb-lg-6 mb-xl-7" data-ride="carousel" data-aos="fade-up">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="{{ asset('images/about-us.jpg') }}" alt="contact us" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mb-6">
+        <h4 class="mb-4">{{ 'contact.title'|trans }}</h4>
+        <div class="d-flex d-flex justify-content-between w-100 w-md-50 flex-column flex-md-row m-auto text-left">
+            <div class="w-100 w-md-40 text-md-left text-center">
+                <p>{{ 'index.contact.e-mail'|trans }} <a href="mailto:osfafl@seznam.cz">osfafl@seznam.cz</a></p>
+                <p class="mb-0">{{ 'index.contact.text1'|trans }}</p>
+                <p class="font-weight-bold mb-0">{{ 'index.contact.text2'|trans }}</p>
+                <p class="font-weight-bold mb-0">{{ 'index.contact.text3'|trans }}</p>
+                <p class="font-weight-bold">{{ 'index.contact.text4'|trans }}</p>
+            </div>
+            <div class="w-100 w-md-40 text-md-left text-center">
+                <p class="mb-0">{{ 'index.contact.text5'|trans }}</p>
+                <p class="font-weight-bold mb-0">{{ 'index.contact.text6'|trans }}</p>
+                <p class="font-weight-bold mb-0">{{ 'index.contact.text7'|trans }}</p>
+                <p class="font-weight-bold mb-0">{{ 'index.contact.text8'|trans }}</p>
+                <p class="font-weight-bold">{{ 'index.contact.text9'|trans }}</p>
+                <p>{{ 'index.contact.text10'|trans }} <a href="tel:+420735408494">+420 735 408 494</a></p>
+            </div>
+        </div>
+
+    </div>
+
+
+    {% include 'site/app/_component/footer.html.twig' %}
+
+{% endblock %}

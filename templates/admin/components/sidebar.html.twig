@@ -35,7 +35,7 @@
         </a>
     </li>
 
-    <li class="nav-item {% if app.request.get('_route') starts with '_slider_' or app.request.get('_route') starts with '_preparing_' %}active{% endif %}">
+    <li class="nav-item {% if app.request.get('_route') starts with '_slider_' %}active{% endif %}">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwoContent" aria-expanded="false" aria-controls="collapseTwoMerch">
             <i class="fas fa-quote-right"></i>
             <span>Obsah stránek</span>
@@ -43,7 +43,19 @@
         <div id="collapseTwoContent" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a href="{{ path('_slider_list') }}" class="collapse-item">Slider</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item {% if app.request.get('_route') starts with '_event_' or app.request.get('_route') starts with '_preparing_' %}active{% endif %}">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThreeContent" aria-expanded="false" aria-controls="collapseTwoMerch">
+            <i class="fa fa-calendar"></i>
+            <span>Připravujeme</span>
+        </a>
+        <div id="collapseThreeContent" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
+            <div class="bg-white py-2 collapse-inner rounded">
                 <a href="{{ path('_preparing_list') }}" class="collapse-item">Připravujeme</a>
+                <a href="{{ path('_event_list') }}" class="collapse-item">Events</a>
             </div>
         </div>
     </li>
