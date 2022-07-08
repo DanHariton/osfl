@@ -47,7 +47,7 @@
                     <div class="mb-4 m-1 d-flex w-100 justify-content-between flex-column flex-md-row pb-3 border-bottom border-dark">
                         <div class="w-100 w-md-40 mt-0 mt-lg-5 px-4 px-lg-0 mb-3 mb-lg-0">
                             <h3>{{ etrans.read(offer.name) }}</h3>
-                            <p>{{ etrans.read(offer.description) }}</p>
+                            <p>{{ etrans.read(offer.description)|raw }}</p>
                         </div>
                         <div class="offer-photos w-100 w-md-50">
                             <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
@@ -83,13 +83,13 @@
                         </div>
                         <div class="w-100 w-md-40 mt-0 mt-lg-5 px-4 px-lg-0">
                             <h3>{{ etrans.read(offer.name) }}</h3>
-                            <p>{{ etrans.read(offer.description) }}</p>
+                            <p>{{ etrans.read(offer.description)|raw }}</p>
                         </div>
                     </div>
                     <div class="mb-4 m-1 d-lg-none d-lg-flex w-100 justify-content-between flex-column flex-md-row pb-3 border-bottom border-dark">
                         <div class="w-100 w-md-40 mt-0 mt-lg-5 px-4 px-lg-0 mb-3 mb-lg-0">
                             <h3>{{ etrans.read(offer.name) }}</h3>
-                            <p>{{ etrans.read(offer.description) }}</p>
+                            <p>{{ etrans.read(offer.description)|raw }}</p>
                         </div>
                         <div class="offer-photos w-100 w-md-50">
                             <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
@@ -111,7 +111,7 @@
                     <div class="mb-4 m-1 d-flex justify-content-between flex-column flex-md-row pb-3 {% if lastOffers[3] is defined %}border-bottom border-dark{% endif %}">
                         <div class="w-100 w-md-40 mt-0 mt-lg-5 px-4 px-lg-0 mb-3 mb-lg-0">
                             <h3>{{ etrans.read(offer.name) }}</h3>
-                            <p>{{ etrans.read(offer.description) }}</p>
+                            <p>{{ etrans.read(offer.description)|raw }}</p>
                         </div>
                         <div class="offer-photos w-100 w-md-50">
                             <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
@@ -148,13 +148,13 @@
                             </div>
                             <div class="w-100 w-md-40 mt-0 mt-lg-5 px-4 px-lg-0">
                                 <h3>{{ etrans.read(offer.name) }}</h3>
-                                <p>{{ etrans.read(offer.description) }}</p>
+                                <p>{{ etrans.read(offer.description)|raw }}</p>
                             </div>
                         </div>
                         <div class="mb-4 m-1 d-lg-none d-lg-flex w-100 justify-content-between flex-column flex-md-row pb-3 border-bottom border-dark">
                             <div class="w-100 w-md-40 mt-0 mt-lg-5 px-4 px-lg-0 mb-3 mb-lg-0">
                                 <h3>{{ etrans.read(offer.name) }}</h3>
-                                <p>{{ etrans.read(offer.description) }}</p>
+                                <p>{{ etrans.read(offer.description)|raw }}</p>
                             </div>
                             <div class="offer-photos w-100 w-md-50">
                                 <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
@@ -178,7 +178,7 @@
                         <div class="mb-4 m-1 d-flex justify-content-between flex-column flex-md-row pb-3 {% if lastOffers[5] is defined %}border-bottom border-dark{% endif %}">
                             <div class="w-100 w-md-40 mt-0 mt-lg-5 px-4 px-lg-0 mb-3 mb-lg-0">
                                 <h3>{{ etrans.read(offer.name) }}</h3>
-                                <p>{{ etrans.read(offer.description) }}</p>
+                                <p>{{ etrans.read(offer.description)|raw }}</p>
                             </div>
                             <div class="offer-photos w-100 w-md-50">
                                 <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
@@ -216,13 +216,13 @@
                             </div>
                             <div class="w-100 w-md-40 mt-0 mt-lg-5 px-4 px-lg-0">
                                 <h3>{{ etrans.read(offer.name) }}</h3>
-                                <p>{{ etrans.read(offer.description) }}</p>
+                                <p>{{ etrans.read(offer.description)|raw }}</p>
                             </div>
                         </div>
                         <div class="mb-4 m-1 d-lg-none d-lg-flex w-100 justify-content-between flex-column flex-md-row pb-3 border-bottom border-dark">
                             <div class="w-100 w-md-40 mt-0 mt-lg-5 px-4 px-lg-0 mb-3 mb-lg-0">
                                 <h3>{{ etrans.read(offer.name) }}</h3>
-                                <p>{{ etrans.read(offer.description) }}</p>
+                                <p>{{ etrans.read(offer.description)|raw }}</p>
                             </div>
                             <div class="offer-photos w-100 w-md-50">
                                 <a class="preview-photo" href="{{ asset(imageAssets ~ offer.images[0].fileName) }}" data-lightbox="{{ etrans.read(offer.name) }}" data-title="{{ etrans.read(offer.name) }}">
