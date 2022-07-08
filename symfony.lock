@@ -243,6 +243,9 @@
             "config/packages/sensio_framework_extra.yaml"
         ]
     },
+    "sonata-project/intl-bundle": {
+        "version": "2.12.1"
+    },
     "symfony/apache-pack": {
         "version": "1.0",
         "recipe": {
@@ -550,6 +553,9 @@
     },
     "symfony/string": {
         "version": "v5.3.10"
+    },
+    "symfony/templating": {
+        "version": "v5.4.3"
     },
     "symfony/translation": {
         "version": "5.3",

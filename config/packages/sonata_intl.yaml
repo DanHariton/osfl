@@ -1,0 +1,9 @@
+sonata_intl:
+  timezone:
+    locales:
+      cs: Europe/Prague
+      en: Europe/London
+    detectors:
+      - sonata.intl.timezone_detector.user
+      - sonata.intl.timezone_detector.locale
+    default: Europe/Prague
