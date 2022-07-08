@@ -5,6 +5,7 @@ namespace App\Controller\Site;
 use App\Entity\Offer;
 use App\Entity\Preparing;
 use App\Entity\SliderImages;
+use App\Repository\OfferRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -47,6 +48,39 @@ class AppController extends AbstractController
 
         return $this->render('site/app/events.html.twig', [
            'preparings' => $preparings
+        ]);
+    }
+
+    /**
+     * @Route("/{_locale}/offer", name="site_app_offer", defaults={"_locale": "cs"}, requirements={"_locale": "en|cs"})
+     * @param OfferRepository $offerRepository
+     * @return Response
+     */
+    public function offer(OfferRepository $offerRepository)
+    {
+        $images = [];
+        $countOne = 1;
+        $countTwo = 1;
+        $row = 0;
+
+        foreach ($offerRepository->findAll() as $offer) {
+            foreach ($offer->getImages() as $image) {
+                $images[$row][] = $image;
+                if ($countOne == 2) {
+                    $row = $row + 1;
+                }
+                if ($countTwo == 6) {
+                    $row = $row + 1;
+                    $countOne = 0;
+                    $countTwo = 0;
+                }
+                $countOne++;
+                $countTwo++;
+            }
+        }
+
+        return $this->render('site/app/offer.html.twig', [
+            'offers' => $images
         ]);
     }
 

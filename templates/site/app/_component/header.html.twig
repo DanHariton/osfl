@@ -4,7 +4,7 @@
         <nav class="my-2 my-md-0 mr-md-3">
             <a class="p-4 mr-5 font-weight-normal {% if app.request.get('_route') ends with '_index' %}active{% endif %}" href="{{ path('site_app_index') }}">{{ 'header.hp'|trans }}</a>
             <a class="p-4 mr-5 font-weight-normal {% if app.request.get('_route') ends with '_about' %}active{% endif %}" href="{{ path('site_app_about') }}" href="{{ path('site_app_about') }}">{{ 'header.aboutUs'|trans }}</a>
-            <a class="p-4 mr-5 font-weight-normal" href="#">{{ 'header.offer'|trans }}</a>
+            <a class="p-4 mr-5 font-weight-normal {% if app.request.get('_route') ends with '_offer' %}active{% endif %}" href="{{ path('site_app_offer') }}">{{ 'header.offer'|trans }}</a>
             <a class="p-4 mr-5 font-weight-normal {% if app.request.get('_route') ends with '_events' %}active{% endif %}" href="{{ path('site_app_events') }}">{{ 'header.preparing'|trans }}</a>
             <a class="p-4 mr-5 font-weight-normal {% if app.request.get('_route') ends with '_contact' %}active{% endif %}" href="{{ path('site_app_contact') }}">{{ 'header.contact'|trans }}</a>
         </nav>
@@ -41,7 +41,7 @@
                 <a class="nav-link font-weight-normal {% if app.request.get('_route') ends with '_about' %}active{% endif %}" href="{{ path('site_app_about') }}" href="{{ path('site_app_about') }}">{{ 'header.aboutUs'|trans }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-weight-normal" href="#">{{ 'header.offer'|trans }}</a>
+                <a class="nav-link font-weight-normal {% if app.request.get('_route') ends with '_offer' %}active{% endif %}" href="{{ path('site_app_offer') }}">{{ 'header.offer'|trans }}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link font-weight-normal {% if app.request.get('_route') ends with '_events' %}active{% endif %}" href="{{ path('site_app_events') }}">{{ 'header.preparing'|trans }}</a>
