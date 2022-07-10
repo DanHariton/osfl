@@ -11,13 +11,13 @@
             <div class="d-flex flex-md-row flex-column justify-content-between mb-md-3 mb-0">
                 {% if loop.index is even %}
                     {% for image in imageContainer %}
-                        <a class="preview-photo-small-offer mb-md-0 mb-3" href="{{ asset(imageAssets ~ image.fileName) }}" data-lightbox="{{ image.offerImage.id }}" data-title="{{ etrans.read(image.offerImage.name) }}">
+                        <a class="preview-photo-small-offer mb-md-0 mb-3" href="{{ asset(imageAssets ~ image.fileName) }}" data-lightbox="{{ image.offerImageContainer.id }}" data-title="{{ etrans.read(image.offerImageContainer.description) }}">
                             <img class="w-100" src="{{ asset(imageAssets ~ image.fileName) }}" alt="offer">
                         </a>
                     {% endfor %}
                 {% else %}
                     {% for image in imageContainer %}
-                        <a class="preview-photo-big mb-md-0 mb-3" href="{{ asset(imageAssets ~ image.fileName) }}" data-lightbox="{{ image.offerImage.id }}" data-title="{{ etrans.read(image.offerImage.name) }}">
+                        <a class="preview-photo-big mb-md-0 mb-3" href="{{ asset(imageAssets ~ image.fileName) }}" data-lightbox="{{ image.offerImageContainer.id }}" data-title="{{ etrans.read(image.offerImageContainer.description) }}">
                             <img class="w-100" src="{{ asset(imageAssets ~ image.fileName) }}" alt="offer">
                         </a>
                     {% endfor %}

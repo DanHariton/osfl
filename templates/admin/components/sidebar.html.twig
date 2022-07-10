@@ -2,7 +2,10 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ path("_slider_list") }}">
-        <div class="sidebar-brand-text mx-3 px-3 py-2 border-white border">OSFL</div>
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fa fa-envelope-open"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">OSFL</div>
     </a>
 
     <hr class="sidebar-divider my-0">
@@ -32,6 +35,13 @@
         <a class="nav-link" href="{{ path('_offer_list') }}">
             <i class="fa fa-tasks" aria-hidden="true"></i>
             <span>Naše nabídka</span>
+        </a>
+    </li>
+
+    <li class="nav-item {% if app.request.get('_route') starts with '_off_images_' %}active{% endif %}">
+        <a class="nav-link" href="{{ path('_off_images_list') }}">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <span>Nabídka (obrazky)</span>
         </a>
     </li>
 

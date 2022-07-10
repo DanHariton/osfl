@@ -1,0 +1,59 @@
+{% extends 'admin/components/layout.html.twig' %}
+
+{% block title %}Naše nabídka obrazky{% endblock %}
+
+{% block content %}
+    <h1 class="h3 mb-2 text-gray-800">Naše nabídka obrazky</h1>
+    {% include 'admin/components/flashes.html.twig' %}
+
+    <a href="{{ path('_off_images_add') }}" class="btn btn-primary btn-sm mb-3">Přidat novu nabídku(obrazky)</a>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Seznam</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered text-dark data-table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Popis</th>
+                        <th>Status</th>
+                        <th>Akce</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for offer in offersImages %}
+                        <tr>
+                            <td>{{ offer.id }}</td>
+                            <td>{{ etrans.jsonHtml(offer.description)|raw }}</td>
+                            <td>
+                                {% if offer.enabled %}
+                                    <span class="badge badge-success">Publikováno</span>
+                                {% else %}
+                                    <span class="badge badge-warning">Skrytý</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if offer.enabled %}
+                                    <a href="{{ path('_off_images_toggle_enable', {'offerImages': offer.id}) }}" class="btn btn-warning btn-sm">Skrýt</a>
+                                {% else %}
+                                    <a href="{{ path('_off_images_toggle_enable', {'offerImages': offer.id}) }}" class="btn btn-success btn-sm">Publikovat</a>
+                                {% endif %}
+
+                                <a href="{{ path('_off_images_edit', {'offerImages': offer.id}) }}" class="btn btn-primary btn-sm">Změnit</a>
+                                <a onclick="return confirm('Jsi si jistý?')"
+                                   href="{{ path('_off_images_delete', {'offerImages': offer.id}) }}"
+                                   class="btn btn-danger btn-sm">
+                                    Vymazat
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

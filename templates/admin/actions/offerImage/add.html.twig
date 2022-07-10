@@ -1,0 +1,24 @@
+{% extends 'admin/components/layout.html.twig' %}
+
+{% block title %}Přidat nabídku obrazky{% endblock %}
+
+{% block content %}
+    <h1 class="h3 mb-2 text-gray-800">
+        Přidat nabídku (obrazky)
+    </h1>
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            {{ form_start(form) }}
+
+            <div class="{% if app.session.get('language') != localeEn %}d-none{% endif %}">
+                {{ form_row(form.descriptionEn) }}
+            </div>
+            <div class="{% if app.session.get('language') != localeCs %}d-none{% endif %}">
+                {{ form_row(form.descriptionCs) }}
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

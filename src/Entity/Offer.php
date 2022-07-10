@@ -81,6 +81,7 @@ class Offer
 
         return $this;
     }
+
     /**
      * @return Collection|File[]
      */

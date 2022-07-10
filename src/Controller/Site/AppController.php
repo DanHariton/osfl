@@ -5,6 +5,7 @@ namespace App\Controller\Site;
 use App\Entity\Offer;
 use App\Entity\Preparing;
 use App\Entity\SliderImages;
+use App\Repository\OfferImagesRepository;
 use App\Repository\OfferRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -53,17 +54,17 @@ class AppController extends AbstractController
 
     /**
      * @Route("/{_locale}/offer", name="site_app_offer", defaults={"_locale": "cs"}, requirements={"_locale": "en|cs"})
-     * @param OfferRepository $offerRepository
+     * @param OfferImagesRepository $offerImagesRepository
      * @return Response
      */
-    public function offer(OfferRepository $offerRepository)
+    public function offer(OfferImagesRepository $offerImagesRepository)
     {
         $images = [];
         $countOne = 1;
         $countTwo = 1;
         $row = 0;
 
-        foreach ($offerRepository->findAll() as $offer) {
+        foreach ($offerImagesRepository->findAll() as $offer) {
             foreach ($offer->getImages() as $image) {
                 $images[$row][] = $image;
                 if ($countOne == 2) {

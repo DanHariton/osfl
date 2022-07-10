@@ -32,6 +32,11 @@ class File
      */
     private $offerImage;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=OfferImages::class, inversedBy="images")
+     */
+    private $offerImageContainer;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class File
     public function setOfferImage(?Offer $offer): self
     {
         $this->offerImage = $offer;
+
+        return $this;
+    }
+
+    public function getOfferImageContainer(): ?OfferImages
+    {
+        return $this->offerImageContainer;
+    }
+
+    public function setOfferImageContainer(?OfferImages $offerImage): self
+    {
+        $this->offerImageContainer = $offerImage;
 
         return $this;
     }
