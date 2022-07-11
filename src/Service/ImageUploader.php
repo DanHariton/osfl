@@ -11,11 +11,11 @@ use Exception;
 class ImageUploader
 {
     const TYPE_1280x720 = 1;
-    const TYPE_1600x900 = 2;
+    const TYPE_1050x770 = 2;
     const TYPE_1920x720 = 3;
     const TYPE_550x400 = 4;
     private static $size_1280x720 = [1280, 720];
-    private static $size_1600x900 = [1600, 900];
+    private static $size_1050x770 = [1050, 770];
     private static $size_1920x720 = [1920, 720];
     private static $size_550x400 = [550, 400];
 
@@ -46,7 +46,7 @@ class ImageUploader
             $this->resizer->setImage($newPath);
             switch ($imageType) {
                 case self::TYPE_1280x720: $size = self::$size_1280x720; break;
-                case self::TYPE_1600x900: $size = self::$size_1600x900; break;
+                case self::TYPE_1050x770: $size = self::$size_1050x770; break;
                 case self::TYPE_1920x720: $size = self::$size_1920x720; break;
                 case self::TYPE_550x400: $size = self::$size_550x400; break;
                 default: $size = self::$size_1280x720;

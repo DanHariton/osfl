@@ -6,7 +6,6 @@ use App\Entity\Offer;
 use App\Entity\Preparing;
 use App\Entity\SliderImages;
 use App\Repository\OfferImagesRepository;
-use App\Repository\OfferRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

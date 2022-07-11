@@ -56,7 +56,7 @@ class OfferController extends AbstractController
             $images = $form->get('files')->getData();
             if (!empty($images)) {
                 foreach ($images as $order => $image) {
-                    $imageName = $imageUploader->upload($image, ImageUploader::TYPE_550x400);
+                    $imageName = $imageUploader->upload($image, ImageUploader::TYPE_1050x770);
                     $imageFile = new File();
                     $imageFile->setFileName($imageName);
                     $imageFile->setOrder($order);
@@ -135,7 +135,7 @@ class OfferController extends AbstractController
             $images = $form->get('files')->getData();
             if (!empty($images)) {
                 foreach ($images as $order => $image) {
-                    $imageName = $imageUploader->upload($image, ImageUploader::TYPE_550x400);
+                    $imageName = $imageUploader->upload($image, ImageUploader::TYPE_1050x770);
                     $imageFile = new File();
                     $imageFile->setFileName($imageName);
                     $imageFile->setOrder($order);
