@@ -1,4 +1,4 @@
-let previewPhoto = document.querySelectorAll('.preview-photo, .preview-photo-small');
+let previewPhoto = document.querySelectorAll('.preview-photo, .preview-photo-small, .preview-photo-small-offer, preview-photo-big');
 
 previewPhoto.forEach(function(el) {
     el.addEventListener('click', function (e) {
