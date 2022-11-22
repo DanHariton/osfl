@@ -12,3 +12,4 @@ require('./contact_tab.js');
 require('./image_slider.js');
 require('./animations.js');
 require('./hamburger');
+require('./zoom');
