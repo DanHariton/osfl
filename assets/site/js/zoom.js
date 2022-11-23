@@ -15,8 +15,10 @@ if (width > MOBILE_DEVISES) {
                 moveSlide.forEach(function (el){
                     el.addEventListener('click', function(e) {
                         const target = e.target.closest('.lb-container');
-                        target.classList.toggle('-active');
-                        target.classList.toggle('-enter');
+                        if(target.classList.contains('-active')) {
+                            target.classList.remove('-active');
+                            target.classList.remove('-enter');
+                        }
                     });
                 });
 
